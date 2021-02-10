@@ -26,11 +26,8 @@
 * MobileNetV2 backbone: https://download.pytorch.org/models/mobilenet_v2-b0353104.pth
 * ResNet50+FPN backbone: https://download.pytorch.org/models/fasterrcnn_resnet50_fpn_coco-258fb6c6.pth
  
- 
 ## 数据集，本例程使用的是PASCAL VOC2012数据集
 * Pascal VOC2012 train/val数据集下载地址：http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar
-* 如果不了解数据集或者想使用自己的数据集进行训练，请参考我的bilibili：https://b23.tv/F1kSCK
-
 
 ## 训练方法
 * 确保提前准备好数据集
@@ -39,12 +36,14 @@
 * 若要训练resnet50+fpn+fasterrcnn，直接使用train_resnet50_fpn.py训练脚本
 * 若要使用多GPU训练，使用```python -m torch.distributed.launch --nproc_per_node=8 --use_env train_multi_GPU.py```指令,```nproc_per_node```参数为使用GPU数量
 
-## 如果对Faster RCNN原理不是很理解可参考我的bilibili
-* https://b23.tv/sXcBSP
-
-## 进一步了解该项目，以及对Faster RCNN代码的分析可参考我的bilibili
-* https://b23.tv/HvMiDy
-
-
 ## Faster RCNN框架图
 ![Faster R-CNN](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing/raw/master/pytorch_object_detection/faster_rcnn/fasterRCNN.png) 
+
+## 参考链接
+本项目参考：https://github.com/WZMIAOMIAO/deep-learning-for-image-processing/tree/master/pytorch_object_detection/faster_rcnn
+
+Faster RCNN原理：https://b23.tv/sXcBSP
+
+Faster RCNN代码分析：https://b23.tv/HvMiDy
+
+数据集介绍与制作：https://b23.tv/F1kSCK

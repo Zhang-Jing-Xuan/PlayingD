@@ -39,6 +39,9 @@
 ## Faster RCNN框架图
 ![Faster R-CNN](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing/raw/master/pytorch_object_detection/faster_rcnn/fasterRCNN.png) 
 
+## 测试结果
+![test](https://github.com/Zhang-Jing-Xuan/FasterRCNN/blob/main/test_result.jpg)
+
 ## 参考链接
 本项目参考：https://github.com/WZMIAOMIAO/deep-learning-for-image-processing/tree/master/pytorch_object_detection/faster_rcnn
 

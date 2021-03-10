@@ -39,6 +39,11 @@
 ## Faster RCNN框架图
 ![Faster R-CNN](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing/raw/master/pytorch_object_detection/faster_rcnn/fasterRCNN.png) 
 
+* 将一张图像输入到backbone得到特征图F。
+* 对于F上的每个点映射回原图，根据事先给定锚框尺寸和大小生成若干锚框。将这些锚框输入到RPN网络，判断是前景还是背景并对锚框坐标位置作回归参数预测（第一次修正）。
+* 经过筛选后，将这些锚框投影到F上获得相应的特征矩阵。
+* 将每个特征矩阵通过ROI pooling层缩放到7*7大小的特征图，接着将特征图展平，串联两个全连接层，再并联两个全连接层，一个输出类别信息，另一个输出边界框回归参数信息。（第二次修正）
+
 ## 测试结果
 
 ### mobilenetv2+fasterrcnn:
